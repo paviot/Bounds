@@ -1,0 +1,8 @@
+#! /bin/bash
+
+git log --name-only > ChangeLog
+git log --format='%aN  <%aE>' | sort -u > AUTHORS
+
+cp LICENSE   COPYING
+cp ChangeLog NEWS
+cp README.md README

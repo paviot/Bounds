@@ -1,0 +1,8 @@
+#! /bin/bash
+
+rm -rf AUTHORS ChangeLog COPYING INSTALL NEWS README
+rm -rf aclocal.m4 autom4te.cache autoscan.log compile config.log \
+       config.status configure configure.scan depcomp install-sh \
+       Makefile Makefile.in missing src/Makefile src/Makefile.in
+rm -rf src/*.o
+rm -rf src/.deps
