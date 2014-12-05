@@ -116,10 +116,10 @@ Bounds::Bounds(StoreNet &n, bool is_integer): N(n), stEq(), p(n.NbPlaces()), t(n
 
 		for (ArcsIterator itt = (*itp)->EnumerateArcs.begin(); itt != (*itp)->EnumerateArcs.end(); ++itt)
 		{
-			int w = itt->GetIn() - itt->GetOut();
+			int w = itt.GetIn() - itt.GetOut();
 
 			if (w != 0)
-				l = l - w*(*t[itt->GetNode()->GetInfo()]);
+				l = l - w*(*t[itt.GetNode()->GetInfo()]);
 		}
 
 		stEq + (l = ((Place *)(*itp))->GetInitial());
